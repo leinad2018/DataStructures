@@ -1,0 +1,45 @@
+package main;
+
+import java.awt.AWTException;
+import java.awt.BorderLayout;
+import java.util.Scanner;
+
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Main {
+
+	/**
+	 * @param args
+	 * @throws AWTException
+	 */
+	public static void main(String[] args) throws AWTException {
+		Scanner input = new Scanner(System.in);
+		System.out.println("hello");
+		while (input.nextBoolean()) {
+			JFrame frame = new JFrame("test");
+			JPanel mainPanel = new JPanel();
+			mainPanel.setLayout(new BorderLayout());
+
+			JPanel checkBoxPanel = new JPanel();
+
+			JCheckBox exchangingCard1 = new JCheckBox("A");
+			checkBoxPanel.add(exchangingCard1);
+			JCheckBox exchangingCard2 = new JCheckBox("B");
+			checkBoxPanel.add(exchangingCard2);
+			JCheckBox exchangingCard3 = new JCheckBox("C");
+			checkBoxPanel.add(exchangingCard3);
+			JCheckBox exchangingCard4 = new JCheckBox("D");
+			checkBoxPanel.add(exchangingCard4);
+			JCheckBox exchangingCard5 = new JCheckBox("E");
+			checkBoxPanel.add(exchangingCard5);
+
+			mainPanel.add(checkBoxPanel);
+
+			frame.add(mainPanel);
+			frame.pack();
+			frame.setVisible(true);
+		}
+	}
+}
